@@ -20,9 +20,47 @@ namespace WPF1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string name = string.Empty;
+        string address = string.Empty;
+        string zipCode = string.Empty;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            name = txtName.Text;
+            address = txtAddress.Text;
+            zipCode = txtZip.Text;
+
+        }
+    }
+
+    public class EntryForm
+    {
+        string Name { get; set; }
+
+        string Address { get; set; }
+
+        int ZipCode { get; set; }
+
+
+        public EntryForm()
+        {
+
+        }
+
+        public EntryForm(string name, string address, int zipCode)
+        {
+            name = Name;
+            address = Address;
+            zipCode = ZipCode;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
