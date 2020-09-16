@@ -37,6 +37,10 @@ namespace WPF1
         }
     }
 
+    /// <summary>
+    /// Creating the EntryForm Class
+    /// </summary>
+
     public class EntryForm
     {
         string Name { get; set; }
@@ -48,7 +52,9 @@ namespace WPF1
 
         public EntryForm()
         {
-
+            Name = string.Empty;
+            Address = string.Empty;
+            ZipCode = -1;
         }
 
         public EntryForm(string name, string address, int zipCode)
