@@ -36,7 +36,16 @@ namespace WPF1
 
             EntryForm entryForm = new EntryForm(name, address, Convert.ToInt32(zipCode));
 
-            ListBox.Items.Add();
+            lstBox.Items.Add($"Name: {name}     Address: {address}      Zipcode: {zipCode}");
+
+            txtAddress.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtZip.Text = string.Empty;
+        }
+
+        public class ListBox : System.Windows.Controls.Primitives.Selector
+        {
+
         }
     }
     
