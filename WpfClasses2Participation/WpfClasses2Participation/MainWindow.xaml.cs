@@ -13,16 +13,40 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfClasses2Participation
+namespace WpfClasses2Participation: 
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        string manufacturer = string.Empty;
+        string name = string.Empty;
+        double price = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public object AllMethods { get; private set; }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            manufacturer = txtManufacturer.Text;
+            name = txtToyName.Text;
+            price = Convert.ToDouble(txtToyPrice.Text);
+
+
+            lstToyResults.Items.Add($"{manufacturer} {name}");
+
+            txtManufacturer.Text = string.Empty;
+            txtToyName.Text = string.Empty;
+            txtToyPrice.Text = string.Empty;
+        }
+
+        private void lstToyResults_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show();
         }
     }
 }

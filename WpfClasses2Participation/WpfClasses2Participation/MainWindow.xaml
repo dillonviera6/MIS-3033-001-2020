@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:WpfClasses2Participation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="White">
+        <Image HorizontalAlignment="Right" Width="418" Source="6101036512835.jpg"/>
+        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Height="23" Margin="166,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" BorderBrush="#FF052EAA" Background="#FFCBC1C1"/>
+        <TextBox x:Name="txtToyName" HorizontalAlignment="Left" Height="23" Margin="166,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" BorderBrush="#FF052EAA" Background="#FFCBC1C1"/>
+        <TextBox x:Name="txtToyPrice" HorizontalAlignment="Left" Height="23" Margin="166,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" BorderBrush="#FF052EAA" Background="#FFCBC1C1"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold" FontSize="18" Height="40"/>
+        <Label Content="Toy Name" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold" FontSize="18" Height="40"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Width="151" FontWeight="Bold" FontSize="18" Height="40"/>
+        <ListBox x:Name="lstToyResults" HorizontalAlignment="Right" Margin="0,260,255,0" Width="537" Background="#FFE4E4E4" BorderBrush="Black" MouseDoubleClick="lstToyResults_MouseDoubleClick"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="220,188,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Height="31" BorderBrush="Black" Click="btnSearch_Click"/>
     </Grid>
 </Window>
