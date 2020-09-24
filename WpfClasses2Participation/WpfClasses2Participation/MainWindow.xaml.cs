@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfClasses2Participation: 
+namespace WpfClasses2Participation
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -46,7 +46,8 @@ namespace WpfClasses2Participation:
 
         private void lstToyResults_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show();
+        Toy selectedToy = (Toy)lstToyResults.SelectedItem;
+        MessageBox.Show(selectedToy.GetAisle());
         }
     }
 }

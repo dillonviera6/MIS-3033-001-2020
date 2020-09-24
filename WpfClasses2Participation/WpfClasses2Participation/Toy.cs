@@ -42,5 +42,10 @@ namespace WpfClasses2Participation
             string toyInfo = $"{manufacturerCap} {price}";
             return toyInfo;
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
