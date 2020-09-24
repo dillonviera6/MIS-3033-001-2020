@@ -37,7 +37,7 @@ namespace WpfClasses2Participation
             price = Convert.ToDouble(txtToyPrice.Text);
 
 
-            lstToyResults.Items.Add($"{manufacturer} {name}");
+            lstToyResults.Items.Add($"Manufacturer: {manufacturer}   Toy: {name}");
 
             txtManufacturer.Text = string.Empty;
             txtToyName.Text = string.Empty;
